@@ -1,75 +1,61 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7 Dias de Paz — Devocional Digital</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    header, section { max-width: 800px; margin: auto; padding: 2em; background: white; margin-top: 2em; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1, h2 { color: #333; }
-    p { line-height: 1.6; }
-    .flags { text-align: center; margin-top: 1em; }
-    .flags button { margin: 0 10px; padding: 0.5em 1em; border: none; background: #eee; border-radius: 5px; cursor: pointer; }
-    .buy-button { display: inline-block; background: #4CAF50; color: white; padding: 1em 2em; text-decoration: none; border-radius: 5px; margin-top: 1em; }
-    .hidden { display: none; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Devocional Cristão - 7 Dias com Paz</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 40px; background-color: #f4f4f4; }
+        h1 { color: #333; }
+        .lang-buttons { margin-bottom: 20px; }
+        button { margin: 0 5px; padding: 10px 15px; font-size: 16px; cursor: pointer; }
+        .section { display: none; }
+        .buy-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <header class="flags">
-    <button onclick="switchLang('pt')">🇧🇷 Português</button>
-    <button onclick="switchLang('en')">🇺🇸 English</button>
-    <button onclick="switchLang('es')">🇪🇸 Español</button>
-  </header>
+    <div class="lang-buttons">
+        <button onclick="showSection('pt')">Português</button>
+        <button onclick="showSection('en')">English</button>
+        <button onclick="showSection('es')">Español</button>
+    </div>
 
-  <!-- PORTUGUÊS -->
-  <section id="pt">
-    <h1>7 Dias de Paz — Um Devocional para Cristãos Ansiosos</h1>
-    <p>Transforme sua ansiedade em paz interior com 7 dias de mensagens, versículos e práticas baseadas na Palavra de Deus.</p>
-    <ul>
-      <li>✅ 7 devocionais em PDF</li>
-      <li>✅ Versículos e orações diárias</li>
-      <li>✅ Três idiomas inclusos</li>
-      <li>✅ Acesso vitalício</li>
-    </ul>
-    <p><strong>Preço:</strong> R$29,90 (pagamento único)</p>
-    <a class="buy-button" href="https://payhip.com/SEULINK">Adquirir Agora</a>
-  </section>
+    <div id="pt" class="section">
+        <h1>Devocional para Cristãos Ansiosos</h1>
+        <p>7 dias de reflexões e orações para encontrar paz em Deus.</p>
+        <a class="buy-button" href="https://payhip.com/devocionaiscristaos">Adquirir Agora</a>
+    </div>
 
-  <!-- ENGLISH -->
-  <section id="en" class="hidden">
-    <h1>7 Days of Peace — A Devotional for Anxious Christians</h1>
-    <p>Turn anxiety into inner peace with 7 days of scripture-based reflections, prayer, and biblical encouragement.</p>
-    <ul>
-      <li>✅ 7 devotionals in PDF</li>
-      <li>✅ Daily scripture and prayer</li>
-      <li>✅ Includes English, Spanish and Portuguese</li>
-      <li>✅ Lifetime access</li>
-    </ul>
-    <p><strong>Price:</strong> $9.90 (one-time payment)</p>
-    <a class="buy-button" href="https://payhip.com/YOURLINK">Buy Now</a>
-  </section>
+    <div id="en" class="section">
+        <h1>Devotional for Anxious Christians</h1>
+        <p>7 days of reflections and prayers to find peace in God.</p>
+        <a class="buy-button" href="https://payhip.com/devocionaiscristaos">Buy Now</a>
+    </div>
 
-  <!-- ESPAÑOL -->
-  <section id="es" class="hidden">
-    <h1>7 Días de Paz — Un Devocional para Cristianos con Ansiedad</h1>
-    <p>Convierte tu ansiedad en paz interior con 7 días de devocionales, versículos y oraciones inspiradas en la Palabra de Dios.</p>
-    <ul>
-      <li>✅ 7 devocionales en PDF</li>
-      <li>✅ Versículos y oraciones diarias</li>
-      <li>✅ Incluye español, inglés y portugués</li>
-      <li>✅ Acceso de por vida</li>
-    </ul>
-    <p><strong>Precio:</strong> $9.90 USD (pago único)</p>
-    <a class="buy-button" href="https://payhip.com/TULINK">Comprar Ahora</a>
-  </section>
+    <div id="es" class="section">
+        <h1>Devocional para Cristianos Ansiosos</h1>
+        <p>7 días de reflexiones y oraciones para encontrar paz en Dios.</p>
+        <a class="buy-button" href="https://payhip.com/devocionaiscristaos">Comprar Ahora</a>
+    </div>
 
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
-      document.getElementById(lang).classList.remove('hidden');
-    }
-  </script>
+    <script>
+        function showSection(lang) {
+            document.querySelectorAll('.section').forEach(div => div.style.display = 'none');
+            document.getElementById(lang).style.display = 'block';
+        }
+        showSection('pt'); // idioma padrão
+    </script>
 </body>
 </html>
